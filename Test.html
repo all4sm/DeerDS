@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deer</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"
+  </head>
+  <body>
+    <script type="text/javascript">
+    function check() {
+        var correct = []
+        var wrong = []
+        var one = document.getElementsByName("one");
+        for (var i=0;i<one.length;i++){
+          if(one[i].checked == true){
+            if(one[i].value == "3"){
+              correct.push("1");
+            }
+            else {
+              wrong.push("1");
+            }
+          }
+        }
+        var two = document.getElementsByName("two");
+        for (var i=0;i<two.length;i++){
+          if(two[i].checked == true){
+            if(two[i].value == "1"){
+              correct.push("2");
+            }
+            else {
+              wrong.push("2");
+            }
+          }
+        }
+        var three = document.getElementsByName("three");
+        for (var i=0;i<three.length;i++){
+          if(three[i].checked == true){
+            if(three[i].value == "4"){
+              correct.push("3");
+            }
+            else {
+              wrong.push("3");
+            }
+          }
+        }
+        var four = document.getElementsByName("four");
+        for (var i=0;i<four.length;i++){
+          if(four[i].checked == true){
+            if(four[i].value == "4"){
+              correct.push("4");
+            }
+            else {
+              wrong.push("4");
+            }
+          }
+        }
+        var five = document.getElementsByName("five");
+        for (var i=0;i<five.length;i++){
+          if(five[i].checked == true){
+            if(five[i].value == "2"){
+              correct.push("5");
+            }
+            else {
+              wrong.push("5");
+            }
+          }
+        }
+        alert("Correct : " + correct + "\n\nWrong : " + wrong);
+        location.href="Main.html"
+    }
+    </script>
+    <div class="wrapper">
+      <div class="Header">
+        <p>Support &nbsp; Login &nbsp; Help</p>
+        <a href="Main.html" target="_self"><h1><img src="deer-shape.png" alt="My Image" width="50" height="40"> &nbsp;Deer DS</h1></a>
+      </div>
+      <div class="menubar">
+        <ul>
+         <li><a href="PDT.html" id="current">PDT</a>
+           <ul>
+              <li><a href="Interger.html">Interger</a></li>
+              <li><a href="Floater.html">Floater</a></li>
+              <li><a href="Character.html">Character</a></li>
+           </ul>
+         </li>
+         <li><a href="NPDT.html" id="current">NPDT</a>
+        	<ul>
+             <li><a href="Linear.html">Linear</a></li>
+             <li><a href="Array.html">- Array</a></li>
+             <li><a href="Stack.html">- Stack</a></li>
+             <li><a href="Queue.html">- Queue</a></li>
+             <li><a href="Linked-List.html">- List</a></li>
+             <li><a href="NonLinear.html">Non Linear</a></li>
+             <li><a href="Trees.html">- Tree</a></li>
+             <li><a href="Graph.html">- Graph</a></li>
+          </ul>
+         </li>
+         <li><a href="#" id="current">Exercise</a>
+           <ul>
+               <li><a href="Test.html">Test</a></li>
+               <li><a href="Game.html">Game</a></li>
+               <li><a href="Q&A.html">Q&A</a></li>
+            </ul>
+          </li>
+         <li><a href="#" id="current">Info</a>
+           <ul>
+               <li><a href="Company.html">Company</a></li>
+               <li><a href="Address.html">Address</a></li>
+               <li><a href="People.html">People</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="Lmargin"></div>
+      <div class="Rmargin"></div>
+      <div class="Article"> <br>
+        <p align="center"><img src="exam.png" alt="exam" width="40px" height="40px"></p>
+        <h1 align="center"> Test </h1> <br><br>
+        <div class="Heading">
+          <h2>#1 What type of variables do you need to put "a" in?</h2>
+        </div> <br> <form>
+          <input type="radio" name="one" value="1">int
+          <input type="radio" name="one" value="2">float
+          <input type="radio" name="one" value="3">char
+          <input type="radio" name="one" value="4">Array
+          <br><br><br><br>
+          <div class="Heading">
+            <h2>#2 Which of these is NOT a linear data type?</h2>
+          </div> <br>
+          <input type="radio" name="two" value="1">Tree
+          <input type="radio" name="two" value="2">Linked-List
+          <input type="radio" name="two" value="3">Queue
+          <input type="radio" name="two" value="4">Array
+          <input type="radio" name="two" value="5">Stack
+          <br><br><br><br>
+          <div class="Heading">
+            <h2>#3 Which is the logic that the first element entered comes out first?</h2>
+          </div> <br>
+          <input type="radio" name="three" value="1">LIFO
+          <input type="radio" name="three" value="2">LOFI
+          <input type="radio" name="three" value="3">FOFI
+          <input type="radio" name="three" value="4">FIFO
+          <br><br><br><br>
+          <div class="Heading">
+            <h2>#4 What do we call the topmost node of the Tree?</h2>
+          </div> <br>
+          <input type="radio" name="four" value="1">Parent node
+          <input type="radio" name="four" value="2">Leaf node
+          <input type="radio" name="four" value="3">Sub-Tree
+          <input type="radio" name="four" value="4">Root
+          <br><br><br><br>
+          <div class="Heading">
+            <h2>#5 Which of the following is NOT true about the graph?</h2>
+          </div> <br>
+          <input type="radio" name="five" value="1">Graph has vertex
+          <input type="radio" name="five" value="2">Graph has root
+          <input type="radio" name="five" value="3">Vertex is linked with edge
+          <input type="radio" name="five" value="4">Tree is a kind of Graph
+          <br><br><br>
+          <input type="button" name="" value="Submit" onclick="check()">
+          <input type="reset" name="" value="Reset">
+        </form>
+      </div>
+      <div class="Footer">
+        <div class="LeftFooter">
+          Contect :
+          <a href="mailto:all4sm50@gmail.com" target="_blank"><img src="gmail.png" alt="mail" width="20px" height="20px"></a>
+          <a href="https://www.facebook.com/profile.php?id=100007323369688" target="_blank"><img src="facebook.png" alt="facebook" width="20px" height="20px"></a>
+          <a href="https://www.instagram.com/all4sm/?hl=ko" target="_blank"><img src="instagram.png" alt="instagram" width="20px" height="20px"></a>
+        </div> 2018314896 Woo SeungMin ☎Tel.01024749341 Copyrightⓒ2019 DeerDS All rights reserved.</div>
+    </div>
+  </body>
+</html>

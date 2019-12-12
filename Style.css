@@ -1,0 +1,177 @@
+
+.wrapper > div{
+}
+.Header{
+grid-area: Header;
+text-align : center;
+padding-top: 15px;
+padding-bottom: 0px;
+background-color: rgb(150,100,0);
+}
+.Header a {font-family: "나눔스퀘어"; text-decoration: none}
+.Header a:link {color: white;}
+.Header a:visited { color: white;}
+.Header a:active { color: rgb(200,200,200);}
+.Header a:hover { color: rgb(200,200,200);}
+.Header p {margin-top: 5px;; margin-bottom: 0; margin-right: 20px; text-align: right; font-size:10px; color: rgb(240,240,240);}
+
+
+.menubar{
+grid-area: Index;
+background: rgb(180,180,180);
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+text-align: center;
+}
+
+.menubar ul{
+background: rgb(180,180,180);
+height:30px;
+list-style:none;
+margin: 0;
+padding: 0;
+display: inline-block;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background: rgb(180,180,180);
+color: rgb(220,220,220);
+display:block;
+font-weight:normal;
+line-height:30px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background: rgb(71,71,71);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(109,109,109);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(109,109,109);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+display:block;
+height:40px;
+font-size:15px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+.Article{
+grid-area: Article;
+margin : 50px 80px 200px 80px;
+}
+.Article h1{
+
+}
+.Lmargin{
+  background-color:white;
+  border-right: 1px rgb(235,235,235) solid;
+}
+.Rmargin{
+  background-color:white;
+  border-left: 1px rgb(235,235,235) solid;
+}
+.Heading{border-bottom: 1px rgb(200,200,200) solid;}
+
+.pics {width: 200px; height: 250px; }
+.Footer{
+grid-area: Footer;
+border-top: 1px rgb(235,235,235) solid;
+background-color: white;
+color: rgb(200,200,200);
+text-align: right;
+font-size: 13px;}
+.LeftFooter{
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  float: left;
+  text-align: left;
+}
+
+.wrapper{
+display: grid;
+grid-template-columns: 2fr 7fr 2fr;
+grid-template-rows: 150px 30px auto 30px;
+grid-template-areas:
+"Header Header Header"
+"Index Index Index"
+"Lmargin Article Rmargin"
+". Footer .";
+}
+#text {width:500px; height: 40px; text-align:left;}
+#text1 {width: 500px; height: 50px; text-align:left; font-size: 20px;}
+#fpx{font-size: 15px;}
+#gg {background-color: rgb(210,170,130);}
+#gr {background-color: rgb(230,210,190);}
+#rd {width: 800px; height: 20px; text-align: left; background-color: rgb(240,240,240); border: 1px rgb(150,150,150) solid; font-family: "굴림"}
+#rd2 {text-align: left; background-color: rgb(240,240,240); border: 1px rgb(150,150,150) solid; font-family: "굴림"}
+table {
+  border: 1px solid #444444;
+  border-collapse: collapse;
+  align:center;
+  font-size: 15px;;
+}
+th {
+  border: 1px solid #444444;
+  padding: 10px;
+}
+
+body {margin : 0px;}

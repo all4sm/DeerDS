@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deer</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+    <script src="http://code.createjs.com/easeljs-0.6.1.min.js"></script>
+    </script>
+    <script>
+      var stage;
+      function init() {
+        stage = new createjs.Stage("demoCanvas");
+        createjs.Touch.enable(stage);
+        stage.mouseMoveOutside = true;
+
+        var Interger = new createjs.Shape();
+        Interger.graphics.beginFill("rgb(250,80,80)").drawRect(0,0,240,130);
+        var labelI = new createjs.Text("INTERGER", "bold 40px Arial", "#FFFFFF"); labelI.textAlign="center"; labelI.x=120; labelI.y = 50;
+        var Int = new createjs.Container(); Int.x = 5; Int.y=450;
+        Int.addChild(Interger,labelI); stage.addChild(Int); stage.update();
+
+        var Floater = new createjs.Shape();
+        Floater.graphics.beginFill("rgb(100,150,250)").drawRect(0,0,240,130);
+        var labelF = new createjs.Text("Floater", "bold 40px Arial", "#FFFFFF"); labelF.textAlign="center"; labelF.x=120; labelF.y = 50;
+        var Float = new createjs.Container(); Float.x = 255; Float.y=450;
+        Float.addChild(Floater,labelF); stage.addChild(Float); stage.update();
+
+        var Character = new createjs.Shape();
+        Character.graphics.beginFill("rgb(100,250,150)").drawRect(0,0,240,130);
+        var labelC = new createjs.Text("Character", "bold 40px Arial", "#FFFFFF"); labelC.textAlign="center"; labelC.x=120; labelC.y = 50;
+        var Char = new createjs.Container(); Char.x = 510; Char.y=450;
+        Char.addChild(Character,labelC); stage.addChild(Char); stage.update();
+
+        var box1 = new createjs.Shape();
+        box1.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box2 = new createjs.Shape();
+        box2.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box3 = new createjs.Shape();
+        box3.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box4 = new createjs.Shape();
+        box4.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box5 = new createjs.Shape();
+        box5.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box6 = new createjs.Shape();
+        box6.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box7 = new createjs.Shape();
+        box7.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box8 = new createjs.Shape();
+        box8.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+        var box9 = new createjs.Shape();
+        box9.graphics.beginFill("rgb(250,150,200)").drawRect(-30,-30,60,40);
+
+
+        var label1 = new createjs.Text("3", "bold 30px Arial", "#FFFFFF");
+        label1.textAlign = "center"; label1.y = -20;
+        var dragger1 = new createjs.Container();
+        dragger1.x = randomx(); dragger1.y = randomy(); dragger1.addChild(box1,label1); stage.addChild(dragger1);
+        var label2 = new createjs.Text("-11", "bold 30px Arial", "#FFFFFF");
+        label2.textAlign = "center"; label2.y = -20;
+        var dragger2 = new createjs.Container();
+        dragger2.x = randomx(); dragger2.y = randomy(); dragger2.addChild(box2,label2); stage.addChild(dragger2);
+        var label3 = new createjs.Text("23", "bold 30px Arial", "#FFFFFF");
+        label3.textAlign = "center"; label3.y = -20;
+        var dragger3 = new createjs.Container();
+        dragger3.x = randomx(); dragger3.y = randomy(); dragger3.addChild(box3,label3); stage.addChild(dragger3);
+        var label4 = new createjs.Text("7.3", "bold 30px Arial", "#FFFFFF");
+        label4.textAlign = "center"; label4.y = -20;
+        var dragger4 = new createjs.Container();
+        dragger4.x = randomx(); dragger4.y = randomy(); dragger4.addChild(box4,label4); stage.addChild(dragger4);
+        var label5 = new createjs.Text("0.1", "bold 30px Arial", "#FFFFFF");
+        label5.textAlign = "center"; label5.y = -20;
+        var dragger5 = new createjs.Container();
+        dragger5.x = randomx(); dragger5.y = randomy(); dragger5.addChild(box5,label5); stage.addChild(dragger5);
+        var label6 = new createjs.Text("-1.8", "bold 30px Arial", "#FFFFFF");
+        label6.textAlign = "center"; label6.y = -20;
+        var dragger6 = new createjs.Container();
+        dragger6.x = randomx(); dragger6.y = randomy(); dragger6.addChild(box6,label6); stage.addChild(dragger6);
+        var label7 = new createjs.Text("-", "bold 30px Arial", "#FFFFFF");
+        label7.textAlign = "center"; label7.y = -20;
+        var dragger7 = new createjs.Container();
+        dragger7.x = randomx(); dragger7.y = randomy(); dragger7.addChild(box7,label7); stage.addChild(dragger7);
+        var label8 = new createjs.Text("C", "bold 30px Arial", "#FFFFFF");
+        label8.textAlign = "center"; label8.y = -20;
+        var dragger8 = new createjs.Container();
+        dragger8.x = randomx(); dragger8.y = randomy(); dragger8.addChild(box8,label8); stage.addChild(dragger8);
+        var label9 = new createjs.Text("#", "bold 30px Arial", "#FFFFFF");
+        label9.textAlign = "center"; label9.y = -20;
+        var dragger9 = new createjs.Container();
+        dragger9.x = randomx(); dragger9.y = randomy(); dragger9.addChild(box9,label9); stage.addChild(dragger9);
+
+
+        dragger1.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Int.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Int.hitTest(p.x, p.y)) {
+        										dragger1.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger2.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Int.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Int.hitTest(p.x, p.y)) {
+        										dragger2.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger3.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Int.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Int.hitTest(p.x, p.y)) {
+        										dragger3.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger4.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Float.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Float.hitTest(p.x, p.y)) {
+        										dragger4.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger5.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Float.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Float.hitTest(p.x, p.y)) {
+        										dragger5.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger6.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Float.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Float.hitTest(p.x, p.y)) {
+        										dragger6.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger7.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Char.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Char.hitTest(p.x, p.y)) {
+        										dragger7.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger8.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Char.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Char.hitTest(p.x, p.y)) {
+        										dragger8.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+        dragger9.onPress = function(evt) {
+        	evt.onMouseMove = function(ev) {
+        					ev.target.x = ev.stageX; ev.target.y = ev.stageY;
+        					var p = Char.globalToLocal(stage.mouseX, stage.mouseY);
+        						if (Char.hitTest(p.x, p.y)) {
+        										dragger9.alpha= 0.5;
+        						}
+        				}
+      	stage.update();	}
+
+
+
+          createjs.Ticker.setFPS(60);
+          createjs.Ticker.addEventListener("tick", stage);
+        stage.update();
+      }
+      function randomx(){
+        var rand = Math.floor(Math.random() * 750);
+        return rand;
+      }
+      function randomy(){
+        var rand = Math.floor(Math.random() * 300);
+        return rand;
+      }
+    </script>
+  </head>
+  <body onload="init();">
+    <div class="wrapper">
+      <div class="Header">
+        <p>Support &nbsp; Login &nbsp; Help</p>
+        <a href="Main.html" target="_self"><h1><img src="deer-shape.png" alt="My Image" width="50" height="40"> &nbsp;Deer DS</h1></a>
+      </div>
+      <div class="menubar">
+        <ul>
+         <li><a href="PDT.html" id="current">PDT</a>
+           <ul>
+              <li><a href="Interger.html">Interger</a></li>
+              <li><a href="Floater.html">Floater</a></li>
+              <li><a href="Character.html">Character</a></li>
+           </ul>
+         </li>
+         <li><a href="NPDT.html" id="current">NPDT</a>
+        	<ul>
+             <li><a href="Linear.html">Linear</a></li>
+             <li><a href="Array.html">- Array</a></li>
+             <li><a href="Stack.html">- Stack</a></li>
+             <li><a href="Queue.html">- Queue</a></li>
+             <li><a href="Linked-List.html">- List</a></li>
+             <li><a href="NonLinear.html">Non Linear</a></li>
+             <li><a href="Trees.html">- Tree</a></li>
+             <li><a href="Graph.html">- Graph</a></li>
+          </ul>
+         </li>
+         <li><a href="#" id="current">Exercise</a>
+           <ul>
+               <li><a href="Test.html">Test</a></li>
+               <li><a href="Game.html">Game</a></li>
+               <li><a href="Q&A.html">Q&A</a></li>
+            </ul>
+          </li>
+         <li><a href="#" id="current">Info</a>
+           <ul>
+               <li><a href="Company.html">Company</a></li>
+               <li><a href="Address.html">Address</a></li>
+               <li><a href="People.html">People</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="Lmargin"></div>
+      <div class="Rmargin"></div>
+      <div class="Article"> <br><br>
+        <div class="Heading">
+          <h1 align="center">Match the Box :D</h1>
+        </div><br><br>
+        <canvas id="demoCanvas" width="750" height="600"></canvas>
+      </div>
+      <div class="Footer">
+        <div class="LeftFooter">
+          Contect :
+          <a href="mailto:all4sm50@gmail.com" target="_blank"><img src="gmail.png" alt="mail" width="20px" height="20px"></a>
+          <a href="https://www.facebook.com/profile.php?id=100007323369688" target="_blank"><img src="facebook.png" alt="facebook" width="20px" height="20px"></a>
+          <a href="https://www.instagram.com/all4sm/?hl=ko" target="_blank"><img src="instagram.png" alt="instagram" width="20px" height="20px"></a>
+        </div> 2018314896 Woo SeungMin ☎Tel.01024749341 Copyrightⓒ2019 DeerDS All rights reserved.</div>
+    </div>
+  </body>
+</html>
